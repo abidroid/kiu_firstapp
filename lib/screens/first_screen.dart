@@ -18,14 +18,30 @@ class FirstScreen extends StatelessWidget {
         centerTitle: true,
         leading: Icon(Icons.settings),
       ),
-      body: Center(
-        child: Text(
-          'Hello World',
-          style: TextStyle(
-              fontSize: 40,
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-              wordSpacing: 10),
+      body: Container(
+        margin: const EdgeInsets.only(left: 50, top: 50),
+        width: 300,
+        height: 300,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: RadialGradient(colors: [
+            Colors.red,
+            Colors.yellow,
+          ]),
+          // gradient: LinearGradient(colors: [
+          //   Colors.green,
+          //   Colors.pink,
+          //   Colors.purple
+          // ],
+          // begin: Alignment.topLeft,
+          //   end: Alignment.bottomCenter,
+          // ),
+        ),
+        child: Center(
+          child: Text(
+            'KIU',
+            style: TextStyle(fontSize: 30),
+          ),
         ),
       ),
     );
