@@ -18,13 +18,15 @@ class FirstScreen extends StatelessWidget {
         centerTitle: true,
         leading: Icon(Icons.settings),
       ),
-      body: Text(
-        'Hello World',
-        style: TextStyle(
-            fontSize: 40,
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-            wordSpacing: 10),
+      body: Center(
+        child: Text(
+          'Hello World',
+          style: TextStyle(
+              fontSize: 40,
+              color: Colors.red,
+              fontWeight: FontWeight.bold,
+              wordSpacing: 10),
+        ),
       ),
     );
   }
