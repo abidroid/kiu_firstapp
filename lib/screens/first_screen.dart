@@ -18,7 +18,38 @@ class FirstScreen extends StatelessWidget {
         centerTitle: true,
         leading: Icon(Icons.settings),
       ),
-      body: Container(
+      body: Column(
+        children: [
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: Colors.red,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
+                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
+                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
+                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
+                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
+                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
+                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Expanded(flex: 2, child: Container(height: 100, color: Colors.green)),
+          Expanded(flex: 3, child: Container(height: 100, color: Colors.blue)),
+        ],
+      ),
+    );
+  }
+}
+
+/*
+Container(
         margin: const EdgeInsets.only(left: 50, top: 50),
         width: 300,
         height: 300,
@@ -28,14 +59,7 @@ class FirstScreen extends StatelessWidget {
             Colors.red,
             Colors.yellow,
           ]),
-          // gradient: LinearGradient(colors: [
-          //   Colors.green,
-          //   Colors.pink,
-          //   Colors.purple
-          // ],
-          // begin: Alignment.topLeft,
-          //   end: Alignment.bottomCenter,
-          // ),
+
         ),
         child: Center(
           child: Text(
@@ -44,6 +68,4 @@ class FirstScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
+ */
