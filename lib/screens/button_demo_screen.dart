@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:kiu_firstapp/widgets/custom_button.dart';
 
 class ButtonDemoScreen extends StatelessWidget {
   const ButtonDemoScreen({super.key});
@@ -34,47 +36,17 @@ class ButtonDemoScreen extends StatelessWidget {
               onPressed: () {},
               child: Text('Not Registered Yet? Sign Up Now')),
           OutlinedButton(onPressed: () {}, child: Text('Rate My App')),
-          GestureDetector(
-            onTap: (){
-              print('Custom Button Clicked');
-            },
-            child: Container(
-                alignment: Alignment.center,
-                width: 200,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(colors: [
-                      Colors.purple,
-                      Colors.pink,
-                    ])),
-                child: Text(
-                  'LOGIN',
-                  style: TextStyle(color: Colors.white),
-                )),
-          ),
-
+          CustomButton(label: 'LOGIN', onPressed: (){
+            print('LOGIN Pressed');
+          },),
           SizedBox(height: 20,),
+          CustomButton(label: 'SIGN UP', onPressed: (){},),
+          SizedBox(height: 20),
 
-          GestureDetector(
-            onTap: (){
-              print('Custom Button Clicked');
-            },
-            child: Container(
-                alignment: Alignment.center,
-                width: 200,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(colors: [
-                      Colors.purple,
-                      Colors.pink,
-                    ])),
-                child: Text(
-                  'SIGN UP',
-                  style: TextStyle(color: Colors.white),
-                )),
-          ),
+          CustomButton(label: 'Rate App', onPressed: (){
+            Fluttertoast.showToast(msg: 'I am a toast message');
+          },)
+
         ],
       ),
     );
