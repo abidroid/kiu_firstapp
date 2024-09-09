@@ -12,8 +12,35 @@ class ButtonDemoScreen extends StatelessWidget {
         backgroundColor: Colors.orange,
         title: const Text('Button Demo'),
       ),
-      body: Column(
-        children: [
+      body: ListView(
+        children: <Widget>[
+
+          Card(
+            color: Colors.amber,
+            child: ListTile(
+              leading: CircleAvatar(backgroundColor: Colors.blue,),
+              title: Text('Virat kohli'),
+              subtitle: Text('Batsman'),
+              trailing: Text('India'),
+              onTap: (){
+                Fluttertoast.showToast(msg: 'I am Kohli');
+              },
+            ),
+          ),
+
+          Card(
+            color: Colors.pink,
+            child: ListTile(
+              leading: CircleAvatar(backgroundColor: Colors.blue,),
+              title: Text('Babar Azam'),
+              subtitle: Text('Batsman'),
+              trailing: Text('Pak'),
+              onTap: (){
+                Fluttertoast.showToast(msg: 'I am Babar');
+              },
+            ),
+          ),
+
           SizedBox(
             width: double.infinity,
             //height: 100,
@@ -36,17 +63,31 @@ class ButtonDemoScreen extends StatelessWidget {
               onPressed: () {},
               child: Text('Not Registered Yet? Sign Up Now')),
           OutlinedButton(onPressed: () {}, child: Text('Rate My App')),
-          CustomButton(label: 'LOGIN', onPressed: (){
-            print('LOGIN Pressed');
-          },),
-          SizedBox(height: 20,),
-          CustomButton(label: 'SIGN UP', onPressed: (){},),
+          CustomButton(
+            label: 'LOGIN',
+            onPressed: () {
+              print('LOGIN Pressed');
+            },
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          CustomButton(
+            label: 'SIGN UP',
+            onPressed: () {},
+          ),
           SizedBox(height: 20),
-
-          CustomButton(label: 'Rate App', onPressed: (){
-            Fluttertoast.showToast(msg: 'I am a toast message');
-          },)
-
+          CustomButton(
+            label: 'Rate App',
+            onPressed: () {
+              Fluttertoast.showToast(msg: 'I am a toast message');
+            },
+          ),
+          Container(
+            width: 200,
+            height: 700,
+            color: Colors.orange,
+          ),
         ],
       ),
     );
