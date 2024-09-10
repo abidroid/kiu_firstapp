@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiu_firstapp/screens/button_demo_screen.dart';
-import 'package:kiu_firstapp/screens/doctors_list_screen.dart';
-import 'package:kiu_firstapp/screens/listview_demo_screen.dart';
+import 'package:kiu_firstapp/screens/gridview_demo_screen.dart';
 
 // entry point
 void main() {
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DoctorsListScreen(),
+      home: const GridviewDemoScreen(),
     );
   }
 }
