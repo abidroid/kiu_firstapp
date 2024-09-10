@@ -4,6 +4,7 @@ class Doctor {
   final String clinicAddress;
   final int fee;
   final String photo;
+  final String? clinicTime;
 
   Doctor({
     required this.name,
@@ -11,5 +12,6 @@ class Doctor {
     required this.clinicAddress,
     required this.fee,
     required this.photo,
+    this.clinicTime,
   });
 }
