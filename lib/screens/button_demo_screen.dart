@@ -15,16 +15,20 @@ class ButtonDemoScreen extends StatelessWidget {
       body: ListView(
         children: <Widget>[
 
-          Card(
-            color: Colors.amber,
-            child: ListTile(
-              leading: CircleAvatar(backgroundColor: Colors.blue,),
-              title: Text('Virat kohli'),
-              subtitle: Text('Batsman'),
-              trailing: Text('India'),
-              onTap: (){
-                Fluttertoast.showToast(msg: 'I am Kohli');
-              },
+          GestureDetector(
+            onTap: (){
+            },
+            child: Card(
+              color: Colors.amber,
+              child: ListTile(
+                leading: CircleAvatar(backgroundColor: Colors.blue,),
+                title: Text('Virat kohli'),
+                subtitle: Text('Batsman'),
+                trailing: Text('India'),
+                onTap: (){
+                  Fluttertoast.showToast(msg: 'I am Kohli');
+                },
+              ),
             ),
           ),
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiu_firstapp/screens/coutner_screen.dart';
 import 'package:kiu_firstapp/screens/gridview_demo_screen.dart';
 import 'package:kiu_firstapp/screens/gridview_dynamic_screen.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const GridviewDynamicScreen(),
+      home: const CounterScreen(),
     );
   }
 }

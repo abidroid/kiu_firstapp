@@ -15,7 +15,7 @@ class GridviewDynamicScreen extends StatelessWidget {
       ),
       body: GridView.builder(
           itemCount: doctors.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisExtent: 400,
           ),
