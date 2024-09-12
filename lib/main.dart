@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiu_firstapp/screens/simple_calculator.dart';
 import 'package:kiu_firstapp/screens/tf_demo_screen.dart';
 
 // entry point
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const TfDemoScreen(),
+      home: const SimpleCalculator(),
     );
   }
 }
