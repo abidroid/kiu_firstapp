@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:kiu_firstapp/screens/second_screen.dart';
+import 'package:kiu_firstapp/screens/third_screen.dart';
 
-class FirstScreen extends StatelessWidget {
+class FirstScreen extends StatefulWidget {
   const FirstScreen({super.key});
+
+  @override
+  State<FirstScreen> createState() => _FirstScreenState();
+}
+
+class _FirstScreenState extends State<FirstScreen> {
+  // type inference
+  var nameCon = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -16,33 +27,49 @@ class FirstScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        leading: Icon(Icons.settings),
       ),
-      body: Column(
-        children: [
-          Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.red,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
-                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
-                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
-                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
-                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
-                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
-                    Container(width: 100, height: 100, color: Colors.white, margin: const EdgeInsets.only(left: 10),),
-                  ],
-                ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+
+            TextField(
+              controller: nameCon,
+              decoration: InputDecoration(
+                hintText: 'Name',
               ),
             ),
-          ),
-          Expanded(flex: 2, child: Container(height: 100, color: Colors.green)),
-          Expanded(flex: 3, child: Container(height: 100, color: Colors.blue)),
-        ],
+
+            ElevatedButton(
+              onPressed: () {
+
+                String name = nameCon.text.trim();
+
+                if( name.isEmpty){
+                  Fluttertoast.showToast(msg: 'Please provide name');
+                }else{
+
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                    return SecondScreen(ayk: name);
+                  }));
+                }
+
+
+
+              },
+              child: const Text('Go to 2nd Screen'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return  ThirdScreen(noam: nameCon.text.trim(),);
+                }));
+              },
+              child: const Text('Go to 3rd Screen'),
+            ),
+          ],
+        ),
       ),
     );
   }
