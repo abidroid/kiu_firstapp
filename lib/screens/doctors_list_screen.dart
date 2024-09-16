@@ -41,11 +41,14 @@ class DoctorsListScreen extends StatelessWidget {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(16),
-                            child: Image.asset(
-                              doctor.photo,
-                              width: 100,
-                              height: 150,
-                              fit: BoxFit.cover,
+                            child: Hero(
+                              tag: doctor.photo,
+                              child: Image.asset(
+                                doctor.photo,
+                                width: 100,
+                                height: 150,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
 

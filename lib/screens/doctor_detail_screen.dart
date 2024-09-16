@@ -15,11 +15,14 @@ class DoctorDetailScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Image.asset(
-            doctor.photo,
-            width: double.infinity,
-            height: 300,
-            fit: BoxFit.cover,
+          Hero(
+            tag: doctor.photo,
+            child: Image.asset(
+              doctor.photo,
+              width: double.infinity,
+              height: 300,
+              fit: BoxFit.cover,
+            ),
           ),
           const SizedBox(height: 20,),
           Text(
