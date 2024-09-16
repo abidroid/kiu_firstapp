@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiu_firstapp/screens/doctors_list_screen.dart';
 import 'package:kiu_firstapp/screens/first_screen.dart';
 import 'package:kiu_firstapp/screens/simple_calculator.dart';
 import 'package:kiu_firstapp/screens/tf_demo_screen.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FirstScreen(),
+      home: const DoctorsListScreen(),
     );
   }
 }
